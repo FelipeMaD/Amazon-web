@@ -132,7 +132,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-
 '''STATICFILES_DIRS = [BASE_DIR / 'static']  # Directory where your static files reside (replace 'static' with your actual directory name)'''
 
 

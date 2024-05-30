@@ -1,0 +1,321 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/icone.png' %}" />
+
+    
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
+        </a>
+        <div class="nav-country">
+            <img src="{% static 'img/location_icon.png' %}" height="20" alt="">
+            <div>
+                <p>Entregar para</p>
+                <h1>Brasil</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-gategory">
+                <p>Todos</p>
+                <img src="{% static 'img/dropdown_icon.png' %}" height="12" alt="">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Pesquisa Amazon.com.br">
+            <img src="{% static 'img/search_icon.png' %}" class="nav-search-icon" alt="">
+        </div>
+        <div class="nav-language">
+            <img src="{% static 'img/brazil-flag.jpg' %}" width="25px" alt="">
+            <p>BR</p>
+            <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt="">
+        </div>
+        <div class="nav-text">
+            <p>Olá, faça seu login</p>
+            <h1>Contas e Listas <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt=""></h1>
+        </div>
+        <div class="nav-text">
+            <p>Devoluções</p>
+            <h1>e Pedidos</h1>
+        </div>
+        <a href="" class="nav-cart">
+            <img src="{% static 'img/cart_icon.png' %}" width="35px" alt="">
+            <h4>Carrinho</h4>
+
+        </a>
+    </nav>
+    <div class="nav-bottom">
+        <div>
+            <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
+            <p>Todos</p>
+        </div>
+        <p>Venda na Amazon</p>
+        <p>Mais Vendidos</p>
+        <p>Ofertas do Dia</p>
+        <p>Prime</p>
+        <p>Livros</p>
+    </div>
+    
+    <div class="header-slider">
+        <a href="#" class="control_prev">&#129144</a>
+        <a href="#" class="control_next">&#129146</a>
+        <ul>
+            <img src="{% static 'img/teste1.jpg' %}" class="header-img" alt="">
+            <img src="{% static 'img/teste2.jpg' %}" class="header-img" alt="">
+            <img src="{% static 'img/teste3.jpg' %}" class="header-img" alt="">
+            <img src="{% static 'img/teste4.jpg' %}" class="header-img" alt="">
+            <img src="{% static 'img/teste5.jpg' %}" class="header-img" alt="">
+            <img src="{% static 'img/teste6.jpg' %}" class="header-img" alt="">
+        </ul>
+    </div>
+
+    <div class="box-row header-box">
+        <div class="box-col">
+            <h3>Ofertas do Dia: Até 40% off</h3>
+            <img src="{% static 'img/caixa.jpg' %}" alt="">
+            <a href="/">Ver ofertas do Dia</a>
+        </div>
+        <div class="box-col">
+            <h3>Parcele em até 15x</h3>
+            <img src="{% static 'img/perfume.jpg' %}" alt="">
+            <a href="/">Ver mais Cartões</a>
+        </div>
+        <div class="box-col">
+            <h3>Veja itens de papelaria</h3>
+            <img src="{% static 'img/papelaria.jpg' %}" alt="">
+            <a href="/">Confira tudo em Papelaria Amazon</a>
+        </div>
+        <div class="box-col">
+            <h3>Audiolivros com 30% de desconto</h3>
+            <img src="{% static 'img/livro.jpg' %}" alt="">
+            <a href="/">Mais um beneficio da assinatura Audible</a>
+        </div>
+    </div>
+    <div class="box-row ">
+        <div class="box-col">
+            <h3>Higiene pessoal</h3>
+            <img src="{% static 'img/box2-1.jpg' %}" alt="">
+            <a href="/">Ver ofertas do Dia</a>
+        </div>
+        <div class="box-col">
+            <h3>Smartphones & Eletrônicos</h3>
+            <img src="{% static 'img/box2-2.jpg' %}" alt="">
+            <a href="/">Ver mais Dispositivos Kindle</a>
+        </div>
+        <div class="box-col">
+            <h3>Tudo para o seu pet</h3>
+            <img src="{% static 'img/box2-3.jpg' %}" alt="">
+            <a href="/">Confira tudo em Dispositivos Amazon</a>
+        </div>
+        <div class="box-col">
+            <h3>Roupas & Acessórios</h3>
+            <img src="{% static 'img/box2-4.jpg' %}" alt="">
+            <a href="/">Mais um beneficio da assinatura Audible</a>
+        </div>
+    </div>
+
+    <div class="products-slider">
+        <h2>Dia dos namorados: encontre presentes incríveis</h2>
+        <div class="products">
+            <img src="{% static 'img/product1-1.jpg' %}" alt="">
+            <img src="{% static 'img/product1-2.jpg' %}" alt="">
+            <img src="{% static 'img/product1-3.jpg' %}" alt="">
+            <img src="{% static 'img/product1-4.jpg' %}" alt="">
+            <img src="{% static 'img/product1-5.jpg' %}" alt="">
+            <img src="{% static 'img/product1-6.jpg' %}" alt="">
+            <img src="{% static 'img/product1-7.jpg' %}" alt="">
+            <img src="{% static 'img/product1-8.jpg' %}" alt="">
+            <img src="{% static 'img/product1-9.jpg' %}" alt="">
+            <img src="{% static 'img/product1-10.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="box-row ">
+        <div class="box-col">
+            <h3>Ofertas do Dia: Até 40% off</h3>
+            <img src="{% static 'img/box3-1.jpg' %}" alt="">
+            <a href="/">Ver ofertas do Dia</a>
+        </div>
+        <div class="box-col">
+            <h3>Conheça os E-readers Kindle</h3>
+            <img src="{% static 'img/box3-2.jpg' %}" alt="">
+            <a href="/">Ver mais Dispositivos Kindle</a>
+        </div>
+        <div class="box-col">
+            <h3>Veja Echo e Fire TV com Alexa</h3>
+            <img src="{% static 'img/box3-3.jpg' %}" alt="">
+            <a href="/">Confira tudo em Dispositivos Amazon</a>
+        </div>
+        <div class="box-col">
+            <h3>Audiolivros com 30% de desconto</h3>
+            <img src="{% static 'img/box3-4.jpg' %}" alt="">
+            <a href="/">Mais um beneficio da assinatura Audible</a>
+        </div>
+    </div>
+    <div class="products-slider-with-price">
+        <h2>Produtos abaixo de $25</h2>
+         <div class="products">
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-1.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-2.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-3.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-4.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-5.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-6.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-7.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-8.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-9.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-10.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="{% static 'img/product2-11.jpg' %}" alt="">
+                </div>
+                <div class="product-offer">
+                    <p>27% off</p> <span>Comprar</span>
+                </div>
+                <p class="product-price">$ <span>14.49</span> Preço: $19.95</p>
+                <h4>Esse produto é o melhor pra você</h4>
+            </div>
+         </div>
+    </div>
+    <div class="products-slider">
+        <h2>Dia dos namorados: encontre presentes incríveis</h2>
+        <div class="products">
+            <img src="{% static 'img/product1-1.jpg' %}" alt="">
+            <img src="{% static 'img/product1-2.jpg' %}" alt="">
+            <img src="{% static 'img/product1-3.jpg' %}" alt="">
+            <img src="{% static 'img/product1-4.jpg' %}" alt="">
+            <img src="{% static 'img/product1-5.jpg' %}" alt="">
+            <img src="{% static 'img/product1-6.jpg' %}" alt="">
+            <img src="{% static 'img/product1-7.jpg' %}" alt="">
+            <img src="{% static 'img/product1-8.jpg' %}" alt="">
+            <img src="{% static 'img/product1-9.jpg' %}" alt="">
+            <img src="{% static 'img/product1-10.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="box-row ">
+        <div class="box-col">
+            <h3>Ofertas do Dia: Até 40% off</h3>
+            <img src="{% static 'img/box3-1.jpg' %}" alt="">
+            <a href="/">Ver ofertas do Dia</a>
+        </div>
+        <div class="box-col">
+            <h3>Conheça os E-readers Kindle</h3>
+            <img src="{% static 'img/box3-2.jpg' %}" alt="">
+            <a href="/">Ver mais Dispositivos Kindle</a>
+        </div>
+        <div class="box-col">
+            <h3>Veja Echo e Fire TV com Alexa</h3>
+            <img src="{% static 'img/box3-3.jpg' %}" alt="">
+            <a href="/">Confira tudo em Dispositivos Amazon</a>
+        </div>
+        <div class="box-col">
+            <h3>Audiolivros com 30% de desconto</h3>
+            <img src="{% static 'img/box3-4.jpg' %}" alt="">
+            <a href="/">Mais um beneficio da assinatura Audible</a>
+        </div>
+    </div>
+
+    <footer>
+        <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+    
+
+<script src="{% static 'js/script.js' %}"></script> 
+</body>
+</html>
