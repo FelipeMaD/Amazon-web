@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da Página</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <main>
+        {% for produto in produtos %}
+            <h2>{{ produto.titulo }}</h2>
+            <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}">
+            <p>{{ produto.descricao }}</p>
+            <p>{{ produto.preco }}</p>
+        {% endfor %}
+    </main>
+
+    <footer>
+        <p>&copy; 2022 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
