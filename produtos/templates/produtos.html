@@ -1,29 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título da Página</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Meu Site</h1>
-    </header>
+{% extends 'base.html' %}
 
-    <main>
+    {% block content %}
+    <div class="produtos_container">
         {% for produto in produtos %}
-            <h2>{{ produto.titulo }}</h2>
-            <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}">
-            <p>{{ produto.descricao }}</p>
-            <p>{{ produto.preco }}</p>
+            <div class="produto_container">
+                <div class="image_content">
+                    <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; max-width: 380px;">
+                </div>
+                <div class="descricao_content">
+                    <h2>{{ produto.titulo }}</h2>
+                    <p>{{ produto.descricao }}</p>
+                </div>
+                <div class="preco">
+                    <p>{{ produto.preco }}</p>
+                </div>
+            </div>
+            
         {% endfor %}
-    </main>
-
-    <footer>
-        <p>&copy; 2022 Meu Site. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
+    </div>
+    {% endblock %}

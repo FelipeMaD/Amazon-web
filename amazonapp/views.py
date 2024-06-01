@@ -10,6 +10,7 @@ from .models import TempModel
 # Create your views here.
 # def home(request):
 #         return render(request, 'home.html')
+
 class homeView(ListView):
     model = TempModel
     template_name = 'home.html'

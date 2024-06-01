@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/icone.png' %}" />
+    <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}">
+
+    
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
+        </a>
+        <div class="nav-country">
+            <img src="{% static 'img/location_icon.png' %}" height="20" alt="">
+            <div>
+                <p>Entregar para</p>
+                <h1>Brasil</h1>
+            </div>
+        </div>
+        <div class="nav-search">
+            <div class="nav-search-gategory">
+                <p>Todos</p>
+                <img src="{% static 'img/dropdown_icon.png' %}" height="12" alt="">
+            </div>
+            <input type="text" class="nav-search-input" placeholder="Pesquisa Amazon.com.br">
+            <img src="{% static 'img/search_icon.png' %}" class="nav-search-icon" alt="">
+        </div>
+        <div class="nav-language">
+            <img src="{% static 'img/brazil-flag.jpg' %}" width="25px" alt="">
+            <p>BR</p>
+            <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt="">
+        </div>
+        <div class="nav-text">
+            <p>Olá, faça seu login</p>
+            <h1>Contas e Listas <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt=""></h1>
+        </div>
+        <div class="nav-text">
+            <p>Devoluções</p>
+            <h1>e Pedidos</h1>
+        </div>
+        <a href="" class="nav-cart">
+            <img src="{% static 'img/cart_icon.png' %}" width="35px" alt="">
+            <h4>Carrinho</h4>
+
+        </a>
+    </nav>
+    <div class="nav-bottom">
+        <div>
+            <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
+            <p>Todos</p>
+        </div>
+        <p>Venda na Amazon</p>
+        <p>Mais Vendidos</p>
+        <p>Ofertas do Dia</p>
+        <p>Prime</p>
+        <p>Livros</p>
+    </div>
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+
+
+     
+    <footer>
+        <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+    </footer>
+    
+</body>
+</html>

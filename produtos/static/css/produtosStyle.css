@@ -1,0 +1,22 @@
+.produtos_container{
+    display: flex;
+}
+.produto_container{
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 15px;
+    width: 13rem;
+    margin: 20px 10px 20px 10px;
+    background-color: white;
+    border-radius: 8px;
+    
+}
+
+.descricao_content{
+    align-self: start;
+    text-wrap: wrap;
+}

@@ -1,7 +1,8 @@
 from django.urls import path
 from . import views
+from . views import CarrinhoListView
+
 
 urlpatterns = [
-    path('', views.carrinho, name='carrinho'),
-
-    ]
+    path('', CarrinhoListView.as_view(), name='carrinho'),
+]
