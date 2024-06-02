@@ -24,5 +24,9 @@
 
         </div>
     </div>
+    <form method="post" action="{% url 'adicionar_ao_carrinho' produtos.pk %}">
+        {% csrf_token %}
+        <input type="submit" value="Adicionar ao carrinho">
+      </form>
 
     {% endblock %}

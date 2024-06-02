@@ -1,8 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    {% for produto in produtos %}
-        <h2>CARRINHO</h2>
+<h1>Itens no Carrinho</h1>
+
+    <ul>
+    {% for item in carrinho %}
+        <li>{{ item.produtocarrinho.titulo }}</li>
+        <form method="post" action="{% url 'add_comprar_novamente' item.pk %}">
+            {% csrf_token %}
+            <input type="submit" value="adicionado ao comprar novamente">
+          </form>
+    {% empty %}
+        <li>Não há itens no carrinho.</li>
     {% endfor %}
+    </ul>
 
 {% endblock %}

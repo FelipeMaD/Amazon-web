@@ -25,4 +25,5 @@ urlpatterns = [
     path('home/', include('amazonapp.urls')),
     path('carrinho/', include('carrinho.urls')),
     path('produtos/', include('produtos.urls')),
+    path('comprar_novamente/', include('comprar_novamente.urls')),
 ] + static(settings.MEDIA_URL , document_root=settings.MEDIA_ROOT)

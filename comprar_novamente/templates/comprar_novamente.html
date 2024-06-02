@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Comprar novamente</h1>
+
+    <ul>
+    {% for item in comprar_novamente %}
+        <li>{{ item.produtocomprarnovamente.produtocarrinho.titulo }}</li>
+
+    {% empty %}
+        <li>Não há itens no comprar novamente.</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
