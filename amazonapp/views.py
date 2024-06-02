@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
-from django.views.generic import ListView
+from django.views.generic import TemplateView
 from django.urls import reverse_lazy
-from .models import TempModel
+
 # from produtos.models import Produtos
 
 
@@ -11,8 +11,7 @@ from .models import TempModel
 # def home(request):
 #         return render(request, 'home.html')
 
-class homeView(ListView):
-    model = TempModel
+class homeView(TemplateView):
     template_name = 'home.html'
     context_object_name = 'home'
 
