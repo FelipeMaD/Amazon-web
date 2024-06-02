@@ -5,7 +5,9 @@
         {% for produto in produtos %}
             <div class="produto_container">
                 <div class="image_content">
-                    <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; max-width: 380px;">
+                    {% if produto.imagem %}      
+                        <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;">
+                    {% endif %}
                 </div>
                 <div class="descricao_content">
                     <h2>{{ produto.titulo }}</h2>

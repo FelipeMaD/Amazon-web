@@ -1,5 +1,13 @@
+.image_content{
+    align-self: center;
+}
+
 .produtos_container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, auto));
+    justify-items: start;
+    grid-gap: 20px;
+
 }
 .produto_container{
     box-sizing: border-box;
