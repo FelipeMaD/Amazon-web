@@ -12,13 +12,19 @@ class ProdutosListView(ListView):
     paginate_by = 12
 
     def get_queryset(self):
+        orderby = self.request.GET.get('orderby', 'titulo')
         query = self.request.GET.get('q')
         queryset = super().get_queryset()
         if query:
+            queryset = queryset.filter( titulo__icontains =query)
+        return queryset.order_by(orderby)
+        
+        '''
+        if query:
             queryset = queryset.filter(titulo__icontains=query)
-        return queryset
+        return queryset'''
 
-
+    
 class ProdutosDetailView(DetailView):
     model = Produtos
     template_name = 'detalhesProdutos.html'
