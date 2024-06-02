@@ -28,3 +28,25 @@
     align-self: start;
     text-wrap: wrap;
 }
+
+.pagination{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: none;
+}
+.item{
+    box-sizing: border-box;
+    padding: 10px;
+    color: white;
+    background-color: rgb(1, 3, 20);
+    transition: 0.2s ease-in-out;
+}
+
+.item:hover{
+    color: rgb(1, 3, 20);
+    background-color: rgb(236, 169, 0);
+}
