@@ -7,13 +7,13 @@
     <title>Amazon</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/icone.png' %}" />
-    <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}"> -->
 
     
 </head>
 <body>
     <nav>
-        <a href="/">
+        <a href="{% url 'home' %}">
             <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
         </a>
         <div class="nav-country">
@@ -28,8 +28,10 @@
                 <p>Todos</p>
                 <img src="{% static 'img/dropdown_icon.png' %}" height="12" alt="">
             </div>
-            <input type="text" class="nav-search-input" placeholder="Pesquisa Amazon.com.br">
-            <img src="{% static 'img/search_icon.png' %}" class="nav-search-icon" alt="">
+            <form method="GET">
+                <input type="text" name="q" class="nav-search-input" placeholder="Pesquisa Amazon.com.br" >
+                
+            </form>
         </div>
         <div class="nav-language">
             <img src="{% static 'img/brazil-flag.jpg' %}" width="25px" alt="">
@@ -53,7 +55,7 @@
     <div class="nav-bottom">
         <div>
             <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
-            <p>Todos</p>
+            <a href="{% url 'produtos' %}"><p>Todos</p></a>
         </div>
         <p>Venda na Amazon</p>
         <p>Mais Vendidos</p>

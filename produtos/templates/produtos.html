@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
-
+{% load static %}
     {% block content %}
+    <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}">
     <div class="produtos_container">
         {% for produto in produtos %}
             <div class="produto_container">
                 <div class="image_content">
                     {% if produto.imagem %}      
-                        <img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;">
+                        <a href="{% url 'detalhes' pk=produto.pk %}"><img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;"></a>
                     {% endif %}
                 </div>
                 <div class="descricao_content">
-                    <h2>{{ produto.titulo }}</h2>
-                    <p>{{ produto.descricao }}</p>
+                    <a href="{% url 'detalhes' pk=produto.pk %}"><h2>{{ produto.titulo }}</h2></a>
+                    <a href="{% url 'detalhes' pk=produto.pk %}"><p>{{ produto.descricao }}</p></a>
                 </div>
                 <div class="preco">
                     <p>{{ produto.preco }}</p>
                 </div>
             </div>
-            
         {% endfor %}
     </div>
     {% endblock %}
