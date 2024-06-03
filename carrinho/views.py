@@ -5,6 +5,8 @@ from django.shortcuts import render,redirect
 from django.shortcuts import get_object_or_404
 from produtos.models import Produtos
 from .models import Carrinho
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 def adicionar_ao_carrinho(request, produto_id):
     produto = get_object_or_404(Produtos, pk=produto_id)
@@ -18,7 +20,7 @@ def adicionar_ao_carrinho(request, produto_id):
 #     return render(request, 'carrinho2.html', {'itens_carrinho': itens_carrinho})
 
 
-class CarrinhoListView(ListView):
+class CarrinhoListView(LoginRequiredMixin, ListView):
     model = Carrinho
     template_name = 'carrinho2.html'
     context_object_name = 'carrinho'

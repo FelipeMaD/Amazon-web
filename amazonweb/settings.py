@@ -41,7 +41,8 @@ APPS = [
     'produtos', 
     'anuncio',
     'comprar_novamente',
-    'carrinho'
+    'carrinho',
+    'autenticacao',
 
 ]
 
@@ -53,6 +54,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ] + APPS
+
+AUTHENTICATION_BACKENDS = [
+ 'django.contrib.auth.backends.ModelBackend',
+
+]
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
