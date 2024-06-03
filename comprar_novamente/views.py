@@ -5,9 +5,11 @@ from django.shortcuts import get_object_or_404
 from carrinho.models import Carrinho
 from django.http import HttpResponse
 from carrinho.views import delete_carrinho
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
-class Comprar_novamenteListView(ListView):
+class Comprar_novamenteListView(LoginRequiredMixin, ListView):
     model = Comprar_novamente
     template_name = 'comprar_novamente.html'
     context_object_name = 'comprar_novamente'
