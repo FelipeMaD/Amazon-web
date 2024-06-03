@@ -1,3 +1,63 @@
+
+.main_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 15rem 0 15rem;
+    background-color: white;
+    padding-top: 3rem;
+}
+
+.check_lists{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20rem;
+}
+.check_lists ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.check_lists ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.check_lists ul li input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.61); /* Adiciona uma sombra interna sutil */
+    background: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: relative;
+    margin-right: 0.5rem;
+
+}
+
+.check_lists ul li input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms;
+}
+
+.check_lists ul li input[type="checkbox"]:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .image_content{
     align-self: center;
 }
@@ -7,6 +67,8 @@
     grid-template-columns: repeat(auto-fill, minmax(13rem, auto));
     justify-items: start;
     grid-gap: 20px;
+    width: 100%;
+
 
 }
 .produto_container{
@@ -18,10 +80,10 @@
     align-items: start;
     gap: 15px;
     width: 13rem;
-    margin: 20px 10px 20px 10px;
+    margin: 0 10px 20px 10px;
     background-color: white;
     border-radius: 8px;
-    
+    background-color: #f7f8f8;
 }
 
 .descricao_content{
@@ -50,3 +112,4 @@
     color: rgb(1, 3, 20);
     background-color: rgb(236, 169, 0);
 }
+

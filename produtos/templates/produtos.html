@@ -2,25 +2,70 @@
 {% load static %}
     {% block content %}
     <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}">
-    <div class="produtos_container">
-        {% for produto in produtos %}
-            <div class="produto_container">
-                <div class="image_content">
-                    {% if produto.imagem %}      
-                        <a href="{% url 'detalhes' pk=produto.pk %}"><img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;"></a>
-                    {% endif %}
-                </div>
-                <div class="descricao_content">
-                    <a href="{% url 'detalhes' pk=produto.pk %}"><h2>{{ produto.titulo }}</h2></a>
-                    <a href="{% url 'detalhes' pk=produto.pk %}"><p>{{ produto.descricao }}</p></a>
-                </div>
-                <div class="preco">
-                    <p>{{ produto.preco }}</p>
-                </div>
+    <div class="main_container">
+        
+        <div>
+            <div class="check_lists">
+                <h3>Departamento</h3>
+                <ul>
+                    <li><input type="checkbox" name="departamento" value="tudo"> Tudo</li>
+                    <li><input type="checkbox" name="departamento" value="alimentos"> Alimentos e Bebidas</li>
+                    <li><input type="checkbox" name="departamento" value="automotivo"> Automotivo</li>
+                    <li><input type="checkbox" name="departamento" value="bebês"> Bebês</li>
+                    <li><input type="checkbox" name="departamento" value="beleza"> Beleza</li>
+                </ul>
             </div>
-        {% endfor %}
+            <div class="check_lists">
+                <h3>Avaliação</h3>
+                <ul>
+                    <li><input type="checkbox" name="avaliacao" value="tudo"> Tudo</li>
+                    <li><input type="checkbox" name="avaliacao" value="4+"> ⭐⭐⭐⭐ Ou mais</li>
+                    <li><input type="checkbox" name="avaliacao" value="3+"> ⭐⭐⭐ Ou mais</li>
+                    <li><input type="checkbox" name="avaliacao" value="2+"> ⭐⭐ Ou mais</li>
+                    <li><input type="checkbox" name="avaliacao" value="1+"> ⭐ Ou mais</li>
+                </ul>
+            </div>
+            <div class="check_lists">
+                <h3>Preço</h3>
+                <ul>
+                    <li><input type="checkbox" name="preco" value="tudo"> Tudo</li>
+                    <li><input type="checkbox" name="preco" value="25"> Até R$25</li>
+                    <li><input type="checkbox" name="preco" value="25a50"> De R$25 a R$50</li>
+                    <li><input type="checkbox" name="preco" value="50a100"> De R$50 a R$100</li>
+                    <li><input type="checkbox" name="preco" value="100a200"> De R$100 a R$200</li>
+                    <li><input type="checkbox" name="preco" value="200"> A partir de R$200</li>
+                </ul>
+            </div>
+            <div class="check_lists">
+                <h3>Desconto</h3>
+                <ul>
+                    <li><input type="checkbox" name="desconto" value="tudo"> Tudo</li>
+                    <li><input type="checkbox" name="desconto" value="10%"> 10% de desconto ou mais</li>
+                    <li><input type="checkbox" name="desconto" value="25%"> 25% de desconto ou mais</li>
+                    <li><input type="checkbox" name="desconto" value="50%"> 50% de desconto ou mais</li>
+                </ul>
+            </div>
+        </div>
+        <div class="produtos_container">
+            {% for produto in produtos %}
+                <div class="produto_container">
+                    <div class="image_content">
+                        {% if produto.imagem %}      
+                            <a href="{% url 'detalhes' pk=produto.pk %}"><img src="{{ produto.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;"></a>
+                        {% endif %}
+                    </div>
+                    <div class="descricao_content">
+                        <a href="{% url 'detalhes' pk=produto.pk %}"><h2>{{ produto.titulo }}</h2></a>
+                        <a href="{% url 'detalhes' pk=produto.pk %}"><p>{{ produto.descricao }}</p></a>
+                    </div>
+                    <div class="preco">
+                        <p>{{ produto.preco }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-
+    
     
         {% if is_paginated %}
             <div class="pagination_container">
