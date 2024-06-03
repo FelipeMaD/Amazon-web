@@ -9,6 +9,12 @@
 
 body{
     background: #dadada;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1 0 auto;
 }
 a{
     text-decoration: none;
@@ -90,17 +96,16 @@ nav{
     padding: 8px 20px;
     background: #232f3e; 
     color: #fff;
-    gap: 20px;
     font-size: 15px; 
+    justify-content: space-between;
 }
 
 .nav-bottom div{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
     font-weight: 500;
 }
-
 .header-slider ul{
     display: flex;
     overflow-y: hidden;
@@ -218,5 +223,20 @@ footer{
     
 }
 .product_footer{
-    margin-top: 100px;
+    flex-shrink: 0;
+}
+.bnt_compra{
+    background: #ffd814;
+    border-color: #fcd200;
+    border: 1px solid;
+    color: #111;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+}
+.bnt_compra:hover{
+    background-color: #ddb347;
 }

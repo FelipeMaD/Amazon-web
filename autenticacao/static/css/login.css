@@ -12,7 +12,7 @@ body{
     min-height: 100vh;
 }
 .logo{
-    margin-top: 20px;
+    margin-top: 5rem;
 }
 .signin-container{
     max-width: 350px;
@@ -75,4 +75,12 @@ body{
 }
 .singin-business{
     font-size: 13px;
+}
+.redirect{
+    text-decoration: none;
+    color: inherit;
+    color: #0066c0;
+}
+#h4redirect{
+    font-size: 10px;
 }

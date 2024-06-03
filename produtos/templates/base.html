@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylebase.css' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/icone.png' %}" />
     <!-- <link rel="stylesheet" href="{% static 'css/produtosStyle.css' %}"> -->
 
@@ -39,12 +39,17 @@
             <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt="">
         </div>
         <div class="nav-text">
-            <p>Olá, faça seu login</p>
-            <h1>Contas e Listas <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt=""></h1>
+            <a href="{% url 'login' %}">
+                <p>Olá, faça seu login</p>
+                <h1>Contas e Listas <img src="{% static 'img/dropdown_icon.png' %}" width="8px" alt=""></h1>
+            </a>
         </div>
         <div class="nav-text">
-            <p>Devoluções</p>
-            <h1>e Pedidos</h1>
+            <a href="{% url 'comprar_novamente' %}">            
+                <p>Devoluções</p>
+                <h1>e Pedidos</h1>
+            </a>
+
         </div>
         <a href="{% url 'carrinho' %}" class="nav-cart">
             <img src="{% static 'img/cart_icon.png' %}" width="35px" alt="">
@@ -54,14 +59,21 @@
     </nav>
     <div class="nav-bottom">
         <div>
-            <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
-            <a href="{% url 'produtos' %}"><p>Todos</p></a>
+            <div>
+                <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
+                <a href="{% url 'produtos' %}"><p>Todos</p></a>
+            </div>
+            <p>Venda na Amazon</p>
+            <p>Mais Vendidos</p>
+            <p>Ofertas do Dia</p>
+            <p>Prime</p>
+            <p>Livros</p>
         </div>
-        <p>Venda na Amazon</p>
-        <p>Mais Vendidos</p>
-        <p>Ofertas do Dia</p>
-        <p>Prime</p>
-        <p>Livros</p>
+        <form action="{% url 'logout' %}"method="post" class="bnt_logout">
+            {% csrf_token %}
+            <button type="submit" class="bnt_compra">Log out</button>
+        </form>
+    
     </div>
     <main>
         {% block content%}
@@ -69,11 +81,11 @@
     </main>
 
 
-     
+    <div class="product_footer">
     <footer>
         <img src="{% static 'img/amazon_logo.png' %}" width="100" alt="">
         <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
     </footer>
-    
+    </div>
 </body>
 </html>

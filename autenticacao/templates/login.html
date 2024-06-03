@@ -1,28 +1,32 @@
-{% extends 'base.html' %}
-{% block title %}Login{% endblock %}
 {% load static %}
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
 <div class="main-container">
+    <a href="{% url 'home' %}"><img class="logo" src="{% static 'img/amazon_logo_dark.png' %}" alt="" width="100px"></a>
+    <div class="signin-container">
+        <h1 class="signin-title">Fazer login</h1>
 
-    <form method="post">
-       {% csrf_token %}
-       <div class="form-group">
-           {{ form.username.label_tag }}
-           {{ form.username }}
-       </div>
-       <div class="form-group">
-           {{ form.password.label_tag }}
-           {{ form.password }}
-       </div>
-       <button type="submit">Entrar</button>
-   </form>
-
-
-    <form action="{% url 'logout' %}"method="post">
-        {% csrf_token %}
-        <button type="submit">Log out</button>
-    </form>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="form-group">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p class="signin-condition">Ao continuar, você concorda com as <span>Condições de Uso</span> da Amazon. 
+        Por favor verifique a <span>Notificação de Privacidade, 
+        Notificação de Cookies</span> e a <span> Notificação de Anúncios Baseados em Interesse.</span></p>
+        <p class="signin-help">&#9656 <span>Precisa de ajuda?</span></p>
+        <hr>
+        <a href="{% url 'register' %}" class="redirect"><h4 id="h4redirect"> &#9656 Não uma conta? clique aqui para fazer o registro</h4></a>
+        <p class="singin-business">Compre na Amazon Business</p>
+    </div>
+    <div class="signin-bottom"></div>
 </div>
 {% endblock %}
