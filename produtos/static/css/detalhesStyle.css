@@ -2,6 +2,64 @@
     background-color: white;
     border-radius: 10px;
     display: flex;
+    justify-content: flex-start;
+    padding: 2rem 0 2rem 5rem;
+
+}
+
+.image_content img{
+    width: 400px;
+    display: flex;
     justify-content: center;
     align-items: center;
+
 }
+.descricao_content{
+    margin-top: 2rem;
+}
+
+.descricao_content p{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+.compra{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 0 0 1rem;
+    width: 12rem;
+}
+
+.compra > * {
+    margin-bottom: 1rem;
+}
+.compra p{
+    font-size: 10px;
+}
+.compra button{
+    background: #ffd814;
+    border-color: #fcd200;
+    background: #ffa41c;
+    border-color: #FF8F00;
+}
+.bnt_compra{
+    background: #ffd814;
+    border-color: #fcd200;
+    border: 1px solid;
+    color: #111;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
+    border: none;
+    border-radius: 10px;
+}
+.bnt_compra:hover{
+    background-color: #ddb347;
+}
+

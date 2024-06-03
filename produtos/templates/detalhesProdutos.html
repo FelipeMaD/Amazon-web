@@ -9,24 +9,26 @@
 
             <div class="image_content">
                 {% if produtos.imagem %}      
-                   <img src="{{ produtos.imagem.url }}" alt="{{ produto.titulo }}" style="border-radius: 5px; height: 150px; width: 150px;">
+                   <img src="{{ produtos.imagem.url }}" alt="{{ produto.titulo }}">
                 {% endif %}
             </div>
 
             <div class="descricao_content">
                <h2>{{ produtos.titulo }}</h2>
                 <p>{{ produtos.descricao }}</p>
-                <p>{{ produtos.preco }}</p>
+                <h3>{{ produtos.preco }}</h3>
             </div>
-            <div>
-                <button>COMPRAR</button>
+            
+            <div class="compra">
+                <h2>{{ produtos.preco }}</h2>
+                <p>Frete: Entrega R$65: 26 de Junho - 9 de julho</p>
+                <form method="post" action="{% url 'adicionar_ao_carrinho' produtos.pk %}" >
+                    {% csrf_token %}
+                    <input type="submit" value="Adicionar ao carrinho" class="bnt_compra">
+                </form>
+                <button class="bnt_compra">Comprar agora</button>
             </div>
-
         </div>
     </div>
-    <form method="post" action="{% url 'adicionar_ao_carrinho' produtos.pk %}">
-        {% csrf_token %}
-        <input type="submit" value="Adicionar ao carrinho">
-      </form>
 
     {% endblock %}
