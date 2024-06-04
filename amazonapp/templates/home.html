@@ -25,7 +25,7 @@
         </div>
         <div class="nav-search">
             <div class="nav-search-gategory">
-                <a href="{% url 'produtos' %}"><p>Todos</p></a>
+                <p>Todos</p>
                 <img src="{% static 'img/dropdown_icon.png' %}" height="12" alt="">
             </div>
             <input type="text" class="nav-search-input" placeholder="Pesquisa Amazon.com.br">
@@ -57,13 +57,13 @@
     <div class="nav-bottom">
         <div>
             <img src="{% static 'img/menu_icon.png' %}" width="25px" alt="">
-            <p>Todos</p>
+            <a href="{% url 'produtos' %}"><p>Todos</p></a>
         </div>
-        <p>Venda na Amazon</p>
-        <p>Mais Vendidos</p>
-        <p>Ofertas do Dia</p>
-        <p>Prime</p>
-        <p>Livros</p>
+        <a href="{% url 'produtos' %}"><p>Venda na Amazon</p></a>
+        <a href="{% url 'produtos' %}"><p>Mais Vendidos</p></a>
+        <a href="{% url 'produtos' %}"><p>Ofertas do Dia</p></a>
+        <a href="{% url 'produtos' %}"><p>Prime</p></a>
+        <a href="{% url 'produtos' %}"><p>Livros</p></a>
     </div>
     
     <div class="header-slider">
