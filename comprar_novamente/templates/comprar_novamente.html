@@ -3,7 +3,7 @@
 {% load static %}
 <link rel="stylesheet" href="{%static 'css/carrinho.css' %}">
 <div class="cart-left">
-    <h1>Ver carrinho</h1>
+    <h1>Compre Novamente</h1>
     <hr>
     {% for item in comprar_novamente %}
     <div class="product-cart-list">
@@ -46,7 +46,7 @@
     </div>
     <hr>
     {% empty %}
-        <h1>Você não comrprou nenhum item.</h1>
+        <h1>Você não comprou nenhum item.</h1>
     {% endfor %}
 </div>
     
