@@ -1,4 +1,4 @@
-# 💫 Pojeto: Amazon
+# 💫 Projeto: Amazon
 🎓 Projeto Acadêmico com objetivo de Consolidação de Aprendizagem<br> ⚙ Funcionalidades: - Catálogo de Produtos<br>                                      - Página de Compra<br>                                      - Página de Carrinho<br>                                      - Comprar Novamente<br>                                      - Autenticação<br>📣 Gestão de Equipe: Desenvolvimento de tarefas<br> 🛢  Integração com banco dados<br>
 
 # 🎖 Autores:
