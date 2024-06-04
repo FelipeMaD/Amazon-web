@@ -30,7 +30,14 @@ def delete_carrinho(request, carrinho_id):
     carrinho.delete()
     return redirect('carrinho')  
 
-    
+# class CarrinhoDeleteView(DeleteView):
+#     model = Carrinho
+#     template_name = 'carrinho_confirm_delete.html'
+#     success_url = reverse_lazy('carrinho')
+
+#     def get_object(self, queryset=None):
+#         id = self.kwargs.get("id")
+#         return get_object_or_404(Carrinho, id=id)
     
   
 
