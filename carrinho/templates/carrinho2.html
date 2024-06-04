@@ -30,6 +30,10 @@
                     {% csrf_token %}
                     <input type="submit" value="Comprar" class="bnt_compra">
                 </form>
+                <form method="post" action="{% url 'carrinho_delete' item.id %}">
+                    {% csrf_token %}
+                    <input type="submit" value="Remover do carrinho" class="bnt_compra">
+                </form>
                 <!-- <div class="cart-list-action">
                     <select>
                         <option value="Quantidade: 1">Quantidade: 1</option>
@@ -50,6 +54,8 @@
             </div>
         </div>
         <hr>
+        {% empty %}
+        <h1>Não há itens no carrinho.</h1>
         {% endfor %}
         <div class="cart-list-subtotal">
             Subtotal (2 itens): <b>R$ 3.560,00</b>

@@ -4,7 +4,6 @@ from .models import Comprar_novamente
 from django.shortcuts import get_object_or_404
 from carrinho.models import Carrinho
 from django.http import HttpResponse
-from carrinho.views import delete_carrinho
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
