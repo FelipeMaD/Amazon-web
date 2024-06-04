@@ -5,7 +5,45 @@
 <div class="signin-container">
     <h1 class="signin-title">Fazer registro</h1>
 
-    <form method="post">
+    <script>
+        function validatePassword() {
+            var password1 = document.getElementById("id_password1").value;
+            var password2 = document.getElementById("id_password2").value;
+        
+            // Adicione aqui as regras de validação de senha do Django
+            var passwordPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+        
+            if (!passwordPattern.test(password1)) {
+                alert("Sua senha não pode ser muito parecida com o resto das suas informações pessoais.\nSua senha precisa conter pelo menos 8 caracteres.\nSua senha não pode ser uma senha comumente utilizada.\nSua senha não pode ser inteiramente numérica.\n Sua senha tem que ter pelo menos uma letra maiúscula.");
+                return false;
+            }
+        
+            if (password1 !== password2) {
+                alert("As senhas não correspondem.");
+                return false;
+            }
+        
+            return true;
+        }
+        function validateUsername() {
+            var username = document.getElementById("id_username").value;
+
+            // Adicione aqui as regras de validação de nome de usuário do Django
+            var usernamePattern = /^[a-zA-Z0-9_]{3,30}$/;
+
+            if (!usernamePattern.test(username)) {
+                alert("O nome de usuário não segue os padrões do Django.");
+                return false;
+            }
+
+    return true;
+}
+function validateForm() {
+    return validateUsername() && validatePassword();
+}
+        </script>
+
+    <form method="post" onsubmit="return validateForm();">
         {% csrf_token %}
         <div class="form-group">
             {{ form.username.label_tag }}
