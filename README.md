@@ -1,4 +1,4 @@
-[requirements.txt](https://github.com/user-attachments/files/15569255/requirements.txt)# 💫 Pojeto: Amazon
+# 💫 Pojeto: Amazon
 🎓 Projeto Acadêmico com objetivo de Consolidação de Aprendizagem<br> ⚙ Funcionalidades: - Catálogo de Produtos<br>                                      - Página de Compra<br>                                      - Página de Carrinho<br>                                      - Comprar Novamente<br>                                      - Autenticação<br>📣 Gestão de Equipe: Desenvolvimento de tarefas<br> 🛢  Integração com banco dados<br>
 
 # 🎖 Autores:
@@ -55,6 +55,7 @@ https://cdn.discordapp.com/attachments/1229784847493632152/1247622415983444080/i
 # Passo a passo para acessar o nosso aplicativo no seu localhost:
 
 - Baixe o arquivo de texto abaixo (requirements.txt) ou apenas crie um arquivo txt com o mesmo nome e insira as seguintes informações:
+[requirements.txt](https://github.com/user-attachments/files/15569255/requirements.txt)
 
 [Uploading reqasgiref==3.8.1
 Django==5.0.6
