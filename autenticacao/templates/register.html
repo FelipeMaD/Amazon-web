@@ -1,7 +1,7 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/login.css' %}">
-<a href="/"><img class="logo" src="{% static 'img/amazon_logo_dark.png' %}" alt="" width="100px"></a>
+<a href="{% url 'home' %}"><img class="logo" src="{% static 'img/amazon_logo_dark.png' %}" alt="" width="100px"></a>
 <div class="signin-container">
     <h1 class="signin-title">Fazer registro</h1>
 
